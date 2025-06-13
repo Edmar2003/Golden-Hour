@@ -216,6 +216,62 @@ span{
     border-top: 1px solid #ffffff;
 }
 
+/* More Gallery Button Styles */
+.more-button {
+    display: block;
+    margin: 30px auto;
+    padding: 12px 40px;
+    background: #ffd700;
+    color: #1b263b;
+    border: none;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.more-button:hover {
+    background: #e0a32f;
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(255, 215, 0, 0.4);
+}
+
+/* More Gallery Section */
+.more-gallery {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    margin: 20px 5px;
+    padding: 5px;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .gallery-box, .more-gallery {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .gallery-box, .more-gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-box, .more-gallery {
+        grid-template-columns: 1fr;
+    }
+}
+
 .blog-post{
     font-size: 22px;
     text-align: center;
